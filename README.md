@@ -1,6 +1,6 @@
 # data-structures-and-algorithms-401
 
-## Table Of Content 
+## Table Of Content :
 
 | Code-Number           | Link                                                  |
 | ----------------------| ----------------------------------------------------- |
