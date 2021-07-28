@@ -6,3 +6,5 @@
 | ----------------------| ----------------------------------------------------- |
 | Code-Challenge-1      | [Reverse an Array](code-challenges/challenge-1.md)    |
 | Code-Challenge-2      | [array-insert-shift](code-challenges/challenge-2.md)  |
+| Code-Challenge-3      | [binary-search](code-challenges/challenge-3.md)       |
+
