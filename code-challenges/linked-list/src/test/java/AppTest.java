@@ -5,37 +5,52 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class AppTest {
-    @Test public void testAppHasAGreeting() {
+    @Test
+    public void testAppHasAGreeting() {
         App classUnderTest = new App();
         assertNotNull("app should have a greeting", classUnderTest.getGreeting());
     }
 
 
-    @Test public void testAppHasInserting() {
-        LinkedList list = new LinkedList ();
+    @Test
+    public void testAppHasInserting() {
+        LinkedList list = new LinkedList();
 
         int checkingValue = 9;
         assertEquals(checkingValue, list.insert(9));
     }
 
-    @Test public void testAppHasIncludingTrue() {
+    @Test
+    public void testAppHasIncludingTrue() {
         LinkedList list = new LinkedList();
 
         int checkingValue = 12;
         assertTrue(list.includes(12));
     }
 
-    @Test public void testAppHasIncludingFalse() {
+    @Test
+    public void testAppHasIncludingFalse() {
         LinkedList list = new LinkedList();
 
         int checkingValue = 12;
         assertFalse(list.includes(12));
     }
 
-    @Test public void testAppHasToString() {
+    @Test
+    public void testAppHasToString() {
         LinkedList list = new LinkedList();
 
         list.insert(9);
         list.insert(22);
         assertEquals("{ 9 } -> { 22 } -> NULL", list.toString());
+    }
+
+    @Test
+    public void testKthFromEnd() {
+        LinkedList list = new LinkedList();
+
+        int value = list.size();
+        if()
+        list.kthFromEnd()
+    }
 }

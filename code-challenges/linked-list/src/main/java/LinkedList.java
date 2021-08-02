@@ -11,15 +11,17 @@ public class LinkedList {
     public void insert (int vlaue) {
         Node newNodeInstance = new Node(vlaue);
         current = this.head;
-
+        int count = 0;
         if(head == null){
             head = newNodeInstance;
             System.out.println("head: " + head.value);
         } else {
             while (current.next != null){
                 current = current.next;
+                count++;
             }
             current.next = newNodeInstance;
+            System.out.println(count);
         }
 
     }
@@ -82,4 +84,23 @@ public class LinkedList {
         }
     }
 
+    public int kthFromEnd(int k){
+        current = head;
+        Node trackerNode = head;
+        int count = 0;
+        while(count <= k){
+            current = current.next;
+            count++;
+            System.out.print(" current : " + current.value);
+            System.out.println(" counter : " + count);
+        }
+        while (current != null){
+            current = current.next;
+            trackerNode = trackerNode.next;
+//            System.out.print(" current : " + current.value);
+//            System.out.println(" trackerNode : " + trackerNode.value);
+        }
+        System.out.println(k + "th Node from the last contains: " + trackerNode.value);
+        return trackerNode.value;
+    }
 }
