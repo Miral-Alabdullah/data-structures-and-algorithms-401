@@ -91,8 +91,8 @@ public class LinkedList {
         while(count <= k){
             current = current.next;
             count++;
-            System.out.print(" current : " + current.value);
-            System.out.println(" counter : " + count);
+//            System.out.print(" current : " + current.value);
+//            System.out.println(" counter : " + count);
         }
         while (current != null){
             current = current.next;
