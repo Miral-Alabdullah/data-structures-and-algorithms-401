@@ -81,6 +81,11 @@ Having a Linked List and requires to write six functions each one has its own jo
 ![code-challenge-2-insert-array](./code-challenge-linked-kth.png)
 
 
+
+<br>
+
+* I got the idea after watching this video : [Video](https://www.youtube.com/watch?v=adS-s2Stg_A&t=481s)
+
 <br>
 
 ## Approach & Efficiency
