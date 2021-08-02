@@ -56,6 +56,8 @@ The requirements of the challenge :
 
 6) insertAfter() => This methods accepts two integer values, uses the first one to check if it's included in the linked list and the other to be added after it.
 
+7) kthFromEnd() => This methods accepts an integer and returns the node that take a place in list at that number.
+
 # Linked List
 
 <br>
@@ -69,6 +71,15 @@ Having a Linked List and requires to write six functions each one has its own jo
 <br>
 
 ![code-challenge-2-insert-array](./c-c-linkedlist2.png)
+
+<br>
+<br>
+<hr>
+<br>
+<br>
+
+![code-challenge-2-insert-array](./code-challenge-linked-kth.png)
+
 
 <br>
 

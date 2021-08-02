@@ -26,7 +26,13 @@ public class App {
         newItem.insertBefore(5,36);
 
         newItem.insertAfter(6,49);
+
         newItem.toString();
+
+//        newItem.kthFromEnd(8);
+//        newItem.kthFromEnd(9);
+//        newItem.kthFromEnd(1);
+        newItem.kthFromEnd(0);
 
     }
 }
