@@ -21,6 +21,10 @@ The requirements of the challenge :
 
   3) Print out the values of nodes following this format `"{ a } -> { b } -> { c } -> NULL"`.
 
+  4) Insert after specific node.
+
+  5) Insert before specific node.
+
 
 
 
@@ -46,3 +50,30 @@ The requirements of the challenge :
 
 3) toString() => I will print out the values of nodes following this format `"{ a } -> { b } -> { c } -> NULL"`.
 
+4) append() => This method checks if the head is null will add the value and set it to the head, If not then it will iterate through the nodes until the one that points to null, then will set this pointer to indicate to the new node that holds the new value.
+
+5) insertBefore() => This methods accepts two integer values, uses the first one to check if it's included in the linked list and the other to be added before it.
+
+6) insertAfter() => This methods accepts two integer values, uses the first one to check if it's included in the linked list and the other to be added after it.
+
+# Linked List
+
+<br>
+
+Having a Linked List and requires to write six functions each one has its own job: one for the inserting a node at the end, one for inserting a node before a specific node, one is to insert it it after a specific node, one to add after a specific node and the last to add before.
+
+<br>
+
+## Whiteboard Process
+
+<br>
+
+![code-challenge-2-insert-array](./c-c-linkedlist2.png)
+
+<br>
+
+## Approach & Efficiency
+
+<br>
+
+I went through the solution step-by-step as the whiteboard shows, starting with understanding the problem domain and visual it, then I write those steps down then converted them into pseudocode then a Java code.  
