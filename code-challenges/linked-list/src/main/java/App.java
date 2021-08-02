@@ -18,12 +18,15 @@ public class App {
         newItem.insert(6);
         newItem.insert(5);
         newItem.insert(12);
-
+        newItem.insert(32);
+        newItem.append(25);
 
         newItem.includes(5);
-        newItem.includes(20);
-        newItem.includes(32);
 
+        newItem.insertBefore(5,36);
+
+        newItem.insertAfter(6,49);
         newItem.toString();
+
     }
 }

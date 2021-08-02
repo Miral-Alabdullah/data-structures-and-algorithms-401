@@ -20,7 +20,6 @@ public class LinkedList {
                 current = current.next;
             }
             current.next = newNodeInstance;
-            System.out.println("current value : " + current.value);
         }
 
     }
@@ -35,7 +34,6 @@ public class LinkedList {
             current = current.next;
         }
 
-        System.out.print("Does " + current.value + " exist? ");
         System.out.println(false);
         return false;
     }
@@ -50,7 +48,38 @@ public class LinkedList {
         }
         formattedValues = formattedValues + String.valueOf(current).toUpperCase();
         System.out.println(formattedValues);
+
         return formattedValues;
+    }
+
+    public void append (int value){
+        insert(value);
+    }
+
+    public void insertBefore(int value, int newValue){
+        current = head;
+        Node newNode = new Node(newValue);
+        while (current.next != null && current.value != value && current.next.value != value){
+            current = current.next;
+        }
+        if(current.next.value == value){
+            newNode.next = current.next;
+            current.next = newNode;
+        }else {
+            System.out.println("There is no node that has the value " + value);
+        }
+    }
+
+    public void insertAfter (int value, int newValue){
+        current = head;
+        Node newNode = new Node(newValue);
+        while (current.next != null && current.value != value){
+            current = current.next;
+        }
+        if(current.value == value){
+            newNode.next = current.next;
+            current.next = newNode;
+        }
     }
 
 }

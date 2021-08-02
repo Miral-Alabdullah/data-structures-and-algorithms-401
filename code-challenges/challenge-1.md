@@ -10,7 +10,7 @@ Having an array that required to be reversed; means that the arranging of the el
 
 <br>
 
-![code-challenge-1-reversed-array](../code-challenges/code-challenge-1-reversed-array.png)
+![code-challenge-1-reversed-array](../code-challenges/code-ch-reversed.png)
 
 <br>
 

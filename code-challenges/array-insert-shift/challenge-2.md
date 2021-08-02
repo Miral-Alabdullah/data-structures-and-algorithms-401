@@ -9,7 +9,7 @@ Insert an element to the midle of a given aray without using any built-in method
 
 <br>
 
-![code-challenge-2-insert-array](../code-challenges/array-insert-shift/code-challenge-2-insertShiftArray.png)
+![code-challenge-2-insert-array](./code-ch-middle.png)
 
 <br>
 
