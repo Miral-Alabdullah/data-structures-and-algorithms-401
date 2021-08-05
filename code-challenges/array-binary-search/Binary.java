@@ -7,10 +7,11 @@ public class Binary {
 
     public static void main(String[] args) {
         System.out.println("Hello");
-//        System.out.println(Arrays.toString(arryOfnumbers));
 
-        int[] arryOfnumbers = {6, 5, 1, 4, 2, 3};
-        System.out.println(binarySearch(arryOfnumbers, 4));
+//        int[] arrayOfNumbers = {-131, -82, 0, 27, 42, 68, 179};
+        int[] arrayOfNumbers = {4, 8, 15, 16, 23, 42};
+//        int[] arrayOfNumbers = {5,4,3,9,12};
+        System.out.println("Location : " + binarySearch(arrayOfNumbers, 15));
 
     }
 
@@ -20,15 +21,18 @@ public class Binary {
 
         int first = 0;
         int last = arr.length;
-
+        int mid_point;
         while(first<last){
-            int mid_point = (first+last)/2;
+            mid_point = (first+last)/2;
+            System.out.println("Mid point : " + mid_point);
             if (arr[mid_point] == searchKey){
                 return mid_point;
             } else if(searchKey<arr[mid_point]){
                 last = mid_point-1;
-            } else{
+                return last;
+            } else if (searchKey>arr[mid_point]){
                 first = mid_point+1;
+                return first;
             }
         }
         return -1;
