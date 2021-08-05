@@ -1,15 +1,16 @@
-# Add Element To The Middle Of An Array
+# Binary Search
 
 <br>
 
-Insert an element to the midle of a given aray without using any built-in methods.
+Search for an item throgh an array using Binary Search Algorithm.
+
 <br>
 
 ## Whiteboard Process
 
 <br>
 
-![code-challenge-2-insert-array](../code-challenges/array-insert-shift/code-challenge-2-insertShiftArray.png)
+![code-challenge-3-binar-search](./code-challenge-3-binary-search.png)
 
 <br>
 
