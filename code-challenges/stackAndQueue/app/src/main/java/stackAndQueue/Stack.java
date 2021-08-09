@@ -36,10 +36,10 @@ public class Stack<T> {
 
     public boolean isEmpty() {
         if(top == null){
-            System.out.println("Is the stack empty? " + true);
+//            System.out.println("Is the stack empty? " + true);
             return true;
-        } else
-            System.out.println("Is the stack empty? " + false);
+        }
+//            System.out.println("Is the stack empty? " + false);
             return false;
     }
 
