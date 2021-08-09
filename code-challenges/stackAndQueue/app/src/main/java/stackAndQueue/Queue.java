@@ -6,16 +6,43 @@ public class Queue<T> {
 
     public void enqueue(T value){
         Node<T> newNode = new Node<T>(value);
-
+        rear = front;
         if(front == null) {
             front = newNode;
+            rear = front;
         }
-        else {
-            newNode.next = front.value;
+        else{
+            rear.next = newNode;
+            rear = newNode;
         }
 
-        System.out.print(newNode.value);
-        System.out.print(" -> ");
-        System.out.println(newNode.next);
+    }
+
+    public T dequeue() throws Exception {
+        if(front == null){
+            throw new Exception("This queue is empty");
+        } else {
+            front = front.next;
+        }
+
+        System.out.println("The removed value : " + front.value);
+        return front.value;
+    }
+
+    public T peek() throws Exception {
+        if(front == null){
+            throw new Exception("This queue is empty");
+        }
+        return front.value;
+    }
+
+    public boolean isEmpty() {
+        if (front==null){
+            System.out.println(true);
+            return true;
+        } else
+            System.out.println(false);
+        return false;
     }
 }
+

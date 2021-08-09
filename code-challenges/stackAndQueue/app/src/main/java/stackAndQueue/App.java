@@ -8,7 +8,7 @@ public class App {
         return "Hello World!";
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         System.out.println(new App().getGreeting());
         System.out.println("======================");
 
@@ -21,9 +21,11 @@ public class App {
 
 
         stack.pop();
+        stack.pop();
         stack.peek();
         stack.isEmpty();
         System.out.println("Top value : " + stack.top.value);
+
 
 
 
@@ -34,11 +36,17 @@ public class App {
 
 
         Queue<Integer> queue = new Queue<Integer>();
+        Queue<Integer> queue1 = new Queue<Integer>();
 
         queue.enqueue(5);
         queue.enqueue(12);
         queue.enqueue(27);
         queue.enqueue(50);
+
+        queue.dequeue();
+
+        queue1.isEmpty();
+        queue.isEmpty();
 
     }
 }

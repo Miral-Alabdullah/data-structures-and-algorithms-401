@@ -9,23 +9,27 @@ public class Stack<T> {
         if(top == null){
             top = newNode;
         }
-        newNode.next = top.value;
+        newNode.next = top;
         top = newNode;
 
         return value;
     }
 
-    public T pop(){
-        top.value= top.next;
-
+    public T pop() throws Exception {
+        T value;
+        if (top == null){
+            throw new Exception("This stack is empty");
+        } else{
+            value = top.value;
+            top= top.next;
+        }
         return top.value;
     }
 
-    public T peek(){
-        if (top==null) System.out.println("Exception message : The stack iss empty");
-
-
-
+    public T peek() throws Exception {
+        if (top==null){
+            throw new Exception("This stack is empty");
+        }
         System.out.println("Peek for the top : " + top.value);
         return top.value;
     }
@@ -38,4 +42,5 @@ public class Stack<T> {
             System.out.println("Is the stack empty? " + false);
             return false;
     }
+
 }
