@@ -8,7 +8,7 @@ public class App {
         return "Hello World!";
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         System.out.println(new App().getGreeting());
 
         LinkedList newItem = new LinkedList();
@@ -52,8 +52,9 @@ public class App {
 
 //        System.out.println("Head Next : " + newItem.head.next.value);
 
-
+//
         newItem.kthFromEnd(0);
-        newItem.kthFromEnd(40);
+        newItem.kthFromEnd(8);
+//        newItem.kthFromEnd(-1);
     }
 }
