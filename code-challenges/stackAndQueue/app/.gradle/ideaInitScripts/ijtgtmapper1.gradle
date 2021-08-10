@@ -1,0 +1,5 @@
+ext.pathMapper = [:]
+ext.pathMapper.put("C:/Program Files/AdoptOpenJDK/jdk-11.0.11.9-openj9/bin/java.exe", "/mnt/c/Program Files/AdoptOpenJDK/jdk-11.0.11.9-openj9/bin/java.exe")
+ext.pathMapper.put("//wsl\$/Ubuntu/home/miral/code401-Java/data-structures-and-algorithms/data-structures-and-algorithms-401/code-challenges/stackAndQueue", "/home/miral/code401-Java/data-structures-and-algorithms/data-structures-and-algorithms-401/code-challenges/stackAndQueue")
+ext.pathMapper.put("<<target java executable path>>", "/usr/lib/jvm/java-11-openjdk-amd64/bin/java")
+ext.mapPath = { path -> pathMapper.get(path) ?: path }
