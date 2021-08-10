@@ -4,6 +4,7 @@
 package linkedList;
 
 import org.junit.Test;
+import java.lang.Exception;
 
 import static org.junit.Assert.*;
 
@@ -11,5 +12,139 @@ public class AppTest {
     @Test public void appHasAGreeting() {
         App classUnderTest = new App();
         assertNotNull("app should have a greeting", classUnderTest.getGreeting());
+    }
+
+    //Can successfully instantiate an empty linked list
+    @Test public void testEmptyLinkedList() {
+        LinkedList list = new LinkedList ();
+
+        assertNull(list.head = null);
+    }
+
+    //Can properly insert into the linked list
+    @Test public void testAppHasInserting() {
+        LinkedList list = new LinkedList ();
+
+        int checkingValue = 9;
+        assertEquals(checkingValue, list.insert(9));
+    }
+
+    //The head property will properly point to the first node in the linked list
+    @Test public void testTheHeadProperty() {
+        LinkedList list = new LinkedList();
+
+        list.insert(2);
+        list.insert(3);
+        assertEquals(2, list.head.next.value);
+    }
+
+    //Will return true when finding a value within the linked list that exists
+    @Test public void testAppHasIncludingTrue() {
+        LinkedList list = new LinkedList();
+        list.append(12);
+         list.append(2);
+        assertTrue(list.includes(2));
+    }
+
+    //Will return false when searching for a value in the linked list that does not exist
+    @Test public void testAppHasIncludingFalse() {
+        LinkedList list = new LinkedList();
+        list.append(2);
+        list.append(4);
+        assertFalse(list.includes(12));
+    }
+
+    /*
+       - Can properly insert multiple nodes into the linked list
+       - Can properly return a collection of all the values that exist in the linked list
+    */
+    @Test public void testAppHasToString() {
+        LinkedList list = new LinkedList();
+
+        list.insert(22);
+        list.insert(9);
+        assertEquals("{ 9 } -> { 22 } -> NULL", list.toString());
+    }
+
+    //Can successfully add a node to the end of the linked list
+    @Test public void addToTheLast() {
+        LinkedList list = new LinkedList();
+
+        list.insert(5);
+        list.append(12);
+        list.append(22);
+        assertEquals(22, list.head.next.next.value);
+    }
+
+    //Can successfully add multiple nodes to the end of a linked list
+    @Test public void addMultipleNode() {
+        LinkedList list = new LinkedList();
+
+        list.insert(5);
+        list.append(12);
+        list.append(22);
+        assertEquals(5,list.head.value);
+        assertEquals(12,list.head.next.value);
+        assertEquals(22, list.head.next.next.value);
+    }
+
+    //Can successfully insert a node before a node located i the middle of a linked list
+    @Test public void addBeforeTheMiddleNode() {
+        LinkedList list = new LinkedList();
+
+        list.insert(5);
+        list.append(12);
+        list.append(22);
+        list.append(13);
+        list.append(27);
+        list.insertBefore(22, 17);
+        assertEquals(17, list.head.next.next.value);
+
+    }
+
+    //Can successfully insert a node before the first node of a linked list
+    @Test public void addBeforeFirstNode(){
+        LinkedList list = new LinkedList();
+
+        list.insert(5);
+        list.append(12);
+        list.insertBefore(5,22);
+        assertEquals(22, list.head.value);
+    }
+
+    //Can successfully insert after a node in the middle of the linked list
+    @Test public void insertAfterMiddleNode(){
+        LinkedList list = new LinkedList();
+
+        list.insert(5);
+        list.append(12);
+        list.append(22);
+        list.append(13);
+        list.append(27);
+        list.insertAfter(22, 17);
+        assertEquals(17, list.head.next.next.next.value);
+    }
+
+    //Can successfully insert a node after the last node of the linked list
+    @Test public void insertAfterLastNode(){
+        LinkedList list = new LinkedList();
+
+        list.insert(5);
+        list.append(12);
+        list.append(22);
+        list.append(13);
+        list.append(27);
+        list.insertAfter(27, 17);
+        assertEquals(17, list.head.next.next.next.next.next.value);
+    }
+
+    // Where k is greater than the length of the linked list
+    @Test public void kGreaterThanLength(){
+        LinkedList list = new LinkedList();
+
+        list.insert(5);
+        list.append(12);
+        list.append(22);
+        assertEquals("Error : The Number You Have Entered Is Out Of The List Length", list.kthFromEnd(12));
     }
 }
