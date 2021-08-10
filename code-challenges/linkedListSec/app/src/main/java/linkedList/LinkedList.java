@@ -88,8 +88,6 @@ public class LinkedList {
             if(current.next.value == value){
                 newNode.next = current.next;
                 current.next = newNode;
-            }else {
-                System.out.println("There is no node that has the value " + value);
             }
         }
     }
@@ -110,6 +108,9 @@ public class LinkedList {
         current = head;
         Node trackerNode = head;
         int count = 0;
+        if(k<0){
+            throw new IndexOutOfBoundsException();
+        }
         try{
             while(count <= k){
                 current = current.next;
@@ -120,7 +121,7 @@ public class LinkedList {
             trackerNode = trackerNode.next;
         }
         }catch (Exception e){
-            System.out.println("Error : The Number You Have Entered Is Out Of The List Length");
+            throw new IndexOutOfBoundsException();
         }
         System.out.println("\n" + k + "th Node from the last contains: " + Objects.requireNonNull(trackerNode).value);
         return trackerNode.value;

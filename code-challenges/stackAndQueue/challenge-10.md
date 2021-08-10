@@ -36,4 +36,57 @@
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
 ## API
-<!-- Description of each method publicly available to your Stack and Queue-->
+
+## Stack => 
+
+<br>
+
+
+- push() :
+
+  - adds a new node with that value to the top of the stack.
+
+- pop() :
+
+  - This method returns the value from node from the top of the stack and removes the node from the top of the stack.
+  - Should raise exception when called on empty stack.
+
+- peek() :
+
+   - This method returns the value of the node located at the top of the stack.
+    
+   - Should raise exception when called on empty stack.
+
+- isEmpty() :
+
+   - This Methos returns boolean indicating whether or not the stack is empty.
+
+
+<br>
+<hr>
+<br>
+
+
+## Queue => 
+
+
+- enqueue() :
+
+  - adds a new node with that value to the back of the queue.
+
+- dequeue() :
+
+  - This method returns the value from node from the front of the queue and removes the node from the front of the queue.
+  - Should raise exception when called on empty queue.
+
+- peek() :
+
+   - This method returns the value of the node located at the front of the queue.
+    
+   - Should raise exception when called on empty queue.
+
+- isEmpty() :
+
+   - This Methos returns boolean indicating whether or not the queue is empty.
+
+

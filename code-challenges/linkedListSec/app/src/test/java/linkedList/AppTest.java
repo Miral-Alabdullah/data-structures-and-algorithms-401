@@ -139,12 +139,77 @@ public class AppTest {
     }
 
     // Where k is greater than the length of the linked list
-    @Test public void kGreaterThanLength(){
+    @Test(expected = IndexOutOfBoundsException.class) public void kGreaterThanLength(){
         LinkedList list = new LinkedList();
 
-        list.insert(5);
+        list.append(5);
         list.append(12);
         list.append(22);
-        assertEquals("Error : The Number You Have Entered Is Out Of The List Length", list.kthFromEnd(12));
+
+        list.kthFromEnd(4);
     }
+
+    //Where k and the length of the list are the same
+    @Test public void sameLength(){
+        LinkedList list = new LinkedList();
+
+        list.append(5);
+        list.append(12);
+        list.append(22);
+        assertEquals(5, list.kthFromEnd(2));
+    }
+
+    //Where k is not a positive integer
+    @Test(expected = IndexOutOfBoundsException.class) public void kIsNotaPositiveInteger() {
+        LinkedList list = new LinkedList();
+
+        list.append(2);
+        list.append(13);
+        list.kthFromEnd(-1);
+    }
+
+    //Where the linked list is of a size 1
+    @Test public void linkedListSizeOfOne(){
+        LinkedList list = new LinkedList();
+
+        list.append(2);
+        assertEquals(2,list.kthFromEnd(0));
+    }
+
+    //Happy Path where k is not at the end, but somewhere in the middle of the linked list
+    @Test public void happyPath(){
+        LinkedList list = new LinkedList();
+
+        list.append(5);
+        list.append(2);
+        list.append(12);
+        list.append(7);
+
+        assertEquals(2, list.kthFromEnd(2));
+    }
+
+    //Happy Path - Expected outcome
+    @Test public void zipHappyPath(){
+        LinkedList list = new LinkedList();
+        LinkedList list1 = new LinkedList();
+        LinkedList list2 = new LinkedList();
+
+        list1.append(2);
+        list1.append(7);
+        list2.append(1);
+        list2.append(9);
+        assertEquals("{ 2 } -> { 1 } -> { 7 } -> { 9 } -> NULL",  list.zipLists(list1, list2).toString());
+    }
+
+    //Expected failure
+    @Test public void expectedFailure(){
+        LinkedList list = new LinkedList();
+        LinkedList list1 = new LinkedList();
+        LinkedList list2 = new LinkedList();
+
+
+        assertNull(list.zipLists(list1, list2).toString());
+    }
+
 }
+

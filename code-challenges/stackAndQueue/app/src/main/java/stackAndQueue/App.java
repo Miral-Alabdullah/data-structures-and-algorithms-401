@@ -8,22 +8,24 @@ public class App {
         return "Hello World!";
     }
 
-    public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
-        System.out.println("======================");
-
-        Stack<Integer> stack = new Stack<Integer>();
-
-        stack.push(5);
-        stack.push(12);
-        stack.push(29);
-
-
-
-        stack.pop();
-        stack.peek();
-        stack.isEmpty();
-        System.out.println("Top value : " + stack.top.value);
+    public static void main(String[] args) throws Exception {
+//        System.out.println(new App().getGreeting());
+//        System.out.println("======================");
+//
+//        Stack<Integer> stack = new Stack<Integer>();
+//
+//        stack.push(5);
+//        stack.push(12);
+//        stack.push(29);
+//
+//
+//
+//        stack.pop();
+//        stack.pop();
+//        stack.peek();
+//        stack.isEmpty();
+//        System.out.println("Top value : " + stack.top.value);
+//
 
 
 
@@ -31,14 +33,32 @@ public class App {
         ====================================================================
         */
 
+//
+//
+//        Queue<Integer> queue = new Queue<Integer>();
+//        Queue<Integer> queue1 = new Queue<Integer>();
+//
+//        queue.enqueue(5);
+//        queue.enqueue(12);
+//        queue.enqueue(27);
+//        queue.enqueue(50);
+//
+//        queue.dequeue();
+//
+//        queue1.isEmpty();
+//        queue.isEmpty();
+
+        /*
+        ====================================================================
+        */
 
 
-        Queue<Integer> queue = new Queue<Integer>();
-
-        queue.enqueue(5);
-        queue.enqueue(12);
-        queue.enqueue(27);
-        queue.enqueue(50);
+        PseudoQueue pseudoQueue = new PseudoQueue();
+        pseudoQueue.enqueue(5);
+        pseudoQueue.enqueue(13);
+        pseudoQueue.enqueue(20);
+        pseudoQueue.enqueue(4);
+        pseudoQueue.dequeue();
 
     }
 }
