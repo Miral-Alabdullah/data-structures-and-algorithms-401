@@ -1,6 +1,5 @@
 package stackAndQueue;
 
-import java.util.NoSuchElementException;
 
 public class PseudoQueue<T> {
     Stack<T> stack;
@@ -17,11 +16,16 @@ public class PseudoQueue<T> {
 
 
     public T dequeue() throws Exception {
-        if (stack1.isEmpty()){
+        if(stack1.isEmpty()){
             while (!(stack.isEmpty())){
-                stack1.push(stack.pop());
-            } stack1.pop();
+                stack1.push(stack1.pop());
+                System.out.println(stack1.top.value);
+            }
         }
+//        stack1.pop();
+        System.out.println(stack1.top.value);
         return stack1.top.value;
     }
+
+
 }
