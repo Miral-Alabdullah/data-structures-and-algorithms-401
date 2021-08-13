@@ -189,7 +189,7 @@ public class AppTest {
     }
 
     //Happy Path - Expected outcome
-    @Test public void zipHappyPath(){
+    @Test public void zipHappyPath() throws Exception {
         LinkedList list = new LinkedList();
         LinkedList list1 = new LinkedList();
         LinkedList list2 = new LinkedList();
@@ -202,13 +202,12 @@ public class AppTest {
     }
 
     //Expected failure
-    @Test public void expectedFailure(){
+    @Test(expected = Exception.class) public void expectedFailure() throws Exception {
         LinkedList list = new LinkedList();
         LinkedList list1 = new LinkedList();
         LinkedList list2 = new LinkedList();
 
-
-        assertNull(list.zipLists(list1, list2).toString());
+        list.zipLists(list1, list2);
     }
 
 }

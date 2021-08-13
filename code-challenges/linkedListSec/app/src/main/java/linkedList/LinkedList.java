@@ -127,10 +127,14 @@ public class LinkedList {
         return trackerNode.value;
     }
 
-    public LinkedList zipLists(LinkedList list1, LinkedList list2){
+    public LinkedList zipLists(LinkedList list1, LinkedList list2) throws Exception {
         current = list1.head;
         currentTwo = list2.head;
         LinkedList newList = new LinkedList();
+
+        if(current == null && currentTwo == null){
+            throw new Exception();
+        }
 
         while (current != null || currentTwo != null){
             if(current != null){
@@ -141,7 +145,6 @@ public class LinkedList {
                 currentTwo = currentTwo.next;
             }
         }
-//        System.out.println(newList);
 
         return newList;
     }

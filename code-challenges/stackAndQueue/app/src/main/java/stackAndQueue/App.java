@@ -53,7 +53,7 @@ public class App {
         */
 
 
-        PseudoQueue pseudoQueue = new PseudoQueue();
+        PseudoQueue<Integer> pseudoQueue = new PseudoQueue<Integer>();
         pseudoQueue.enqueue(5);
         pseudoQueue.enqueue(13);
         pseudoQueue.enqueue(20);
