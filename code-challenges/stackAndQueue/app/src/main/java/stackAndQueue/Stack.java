@@ -42,5 +42,18 @@ public class Stack<T> {
             return false;
     }
 
+
+    public String toString(){
+        String s = "";
+        Node<T> current = top;
+        while (current != null){
+            s += "{ " + current.value + " } -> ";
+            current = current.next;
+        }
+        s += "NULL";
+        System.out.println(s);
+        return s;
+    }
+
 }
 

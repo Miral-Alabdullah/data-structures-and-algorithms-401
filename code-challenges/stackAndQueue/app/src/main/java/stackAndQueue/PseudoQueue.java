@@ -12,7 +12,6 @@ public class PseudoQueue<T> {
 
     public void enqueue(T value) {
         stack.push(value);
-        System.out.println("Push : " + value);
     }
 
     public T dequeue() throws Exception {
@@ -23,7 +22,6 @@ public class PseudoQueue<T> {
         }
         T value = stack1.peek();
         stack1.pop();
-        System.out.println("Popped value : " + value);
         return value;
     }
     }

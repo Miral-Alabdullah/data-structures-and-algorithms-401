@@ -12,11 +12,12 @@ public class App {
 //        System.out.println(new App().getGreeting());
 //        System.out.println("======================");
 //
-//        Stack<Integer> stack = new Stack<Integer>();
-//
-//        stack.push(5);
-//        stack.push(12);
-//        stack.push(29);
+        Stack<Integer> stack = new Stack<Integer>();
+
+        stack.push(5);
+        stack.push(12);
+        stack.push(29);
+//        stack.toString();
 //
 //
 //        stack.pop();
@@ -38,9 +39,11 @@ public class App {
         Queue<Integer> queue = new Queue<Integer>();
 //        Queue<Integer> queue1 = new Queue<Integer>();
 //
-//        queue.enqueue(5);
-//        queue.enqueue(12);
-//        queue.enqueue(29);
+
+        queue.enqueue(5);
+        queue.enqueue(12);
+        queue.enqueue(29);
+//        queue.toString();
 //
 //        System.out.print("Top : " + queue.front.value + " -> ");
 //        System.out.print("Next : " + queue.front.next.value + " -> ");
@@ -63,11 +66,8 @@ public class App {
         pseudoQueue.enqueue(7);
 
 
-
-        System.out.println("Top value : " + pseudoQueue.stack.peek());
-//        pseudoQueue.toString();
+        pseudoQueue.stack.toString();
         pseudoQueue.dequeue();
-        System.out.println("Top value : " + pseudoQueue.stack1.peek());
 
     }
 }
