@@ -4,7 +4,6 @@ public class Queue<T> {
     Node<T> front = null;
     Node<T> rear = null;
 
-
     public void enqueue(T value){
         Node<T> newNode = new Node<T>(value);
         rear = front;
@@ -16,7 +15,6 @@ public class Queue<T> {
             rear.next = newNode;
             rear = newNode;
         }
-
     }
 
     public T dequeue() throws Exception {
@@ -45,5 +43,17 @@ public class Queue<T> {
             System.out.println(false);
         return false;
     }
+
+//    public String toString(){
+//        String s = "";
+//        Node<T> current = front;
+//        while (current != null){
+//            s += "{ " + current.value + " } -> ";
+//            current = current.next;
+//        }
+//        s += "NULL";
+//        System.out.println("Queue : " + s);
+//        return s;
+//    }
 }
 

@@ -1,36 +1,35 @@
 package stackAndQueue;
 
+
 public class Stack<T> {
-    Node<T> top = null;
+    public Node<T> top ;
 
 
-    public T push(T value) {
+    public void push(T value) {
         Node<T> newNode = new Node<T>(value);
         if(top == null){
             top = newNode;
-        }
+        } else{
         newNode.next = top;
         top = newNode;
-
-        return value;
+        }
     }
 
     public T pop() throws Exception {
-        T value;
+        T value = null;
         if (top == null){
             throw new Exception("This stack is empty");
-        } else{
+        } if(top != null){
             value = top.value;
             top= top.next;
         }
-        return top.value;
+        return value;
     }
 
     public T peek() throws Exception {
         if (top==null){
             throw new Exception("This stack is empty");
         }
-        System.out.println("Peek for the top : " + top.value);
         return top.value;
     }
 
@@ -43,4 +42,18 @@ public class Stack<T> {
             return false;
     }
 
+
+    public String toString(){
+        String s = "";
+        Node<T> current = top;
+        while (current != null){
+            s += "{ " + current.value + " } -> ";
+            current = current.next;
+        }
+        s += "NULL";
+        System.out.println(s);
+        return s;
+    }
+
 }
+
