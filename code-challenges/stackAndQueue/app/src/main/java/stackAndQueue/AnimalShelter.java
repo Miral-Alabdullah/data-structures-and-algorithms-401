@@ -9,11 +9,13 @@ public class AnimalShelter<T>{
         newDog = new Queue<>();
     }
 
-    public void enqueue(T animal) {
+    public void enqueue(T animal) throws Exception{
         if(animal instanceof Cat){
             newCat.enqueue(animal);
         }if(animal instanceof Dog){
             newDog.enqueue(animal);
+        } if(!(animal instanceof Cat || animal instanceof Dog)){
+            throw new Exception("The instance should be either dog or cat");
         }
     }
 

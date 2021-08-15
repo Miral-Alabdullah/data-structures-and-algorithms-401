@@ -14,7 +14,7 @@ public class AppTest {
 
     //Can successfully push onto a stack
     @Test public void pushOntoStack() {
-        Stack<Integer> stack = new Stack<Integer>();
+        Stack<Integer> stack = new Stack<>();
 
         stack.push(5);
         assertEquals(5, stack.top.value, 0);
@@ -22,17 +22,17 @@ public class AppTest {
 
     //Can successfully push multiple values onto a stack
     @Test public void pushMultipleValues() {
-        Stack<Integer> stack = new Stack<Integer>();
+        Stack<Integer> stack = new Stack<>();
 
         stack.push(5);
         stack.push(2);
         stack.push(10);
-        assertEquals(2, stack.top.next);
+        assertEquals(2, stack.top.next.value,0);
     }
 
     //Can successfully pop off the stack
     @Test public void popFromTheStack() throws Exception {
-        Stack<Integer> stack = new Stack<Integer>();
+        Stack<Integer> stack = new Stack<>();
         stack.push(5);
         stack.push(2);
         stack.push(10);
@@ -42,7 +42,7 @@ public class AppTest {
 
     //Can successfully empty a stack after multiple pops
     @Test public void popMultipleValues() throws Exception {
-        Stack<Integer> stack = new Stack<Integer>();
+        Stack<Integer> stack = new Stack<>();
         stack.push(5);
         stack.push(2);
         stack.push(10);
@@ -53,16 +53,50 @@ public class AppTest {
 
     //Can successfully instantiate an empty stack
     @Test public void instantiateAnEmptyStack(){
-        Stack<Integer> stack = new Stack<Integer>();
+        Stack<Integer> stack = new Stack<>();
 
         assertTrue(stack.isEmpty());
     }
 
     //Calling pop or peek on empty stack raises exception
-    @Test public void peekOnEmptyStack() throws Exception {
-        Stack<Integer> stack = new Stack<Integer>();
+    @Test(expected = Exception.class) public void peekOnEmptyStack() throws Exception {
+        Stack<Integer> stack = new Stack<>();
+        stack.pop();
+    }
 
-        assertEquals("This stack is empty", stack.pop());
+    //stack-queue-pseudo
+    @Test public void happyPath(){
+        PseudoQueue<Integer> pseudoQueue = new PseudoQueue<>();
+        pseudoQueue.enqueue(5);
+        pseudoQueue.enqueue(3);
+        pseudoQueue.enqueue(7);
 
+
+        assertEquals("{ 7 } -> { 3 } -> { 5 } -> NULL", pseudoQueue.stack.toString());
+    }
+
+    //Expected failure
+    @Test(expected = Exception.class) public void expectedFailure() throws Exception{
+        PseudoQueue<Integer> pseudoQueue = new PseudoQueue<>();
+        pseudoQueue.stack1.pop();
+    }
+
+    //Animal Shelter
+    @Test public void happyPath2() throws Exception{
+        AnimalShelter animalShelter = new AnimalShelter();
+        Cat cat1 = new Cat("NimNim", "Shirazi", 2);
+        Cat cat2 = new Cat("MinMin", "Persian", 3);
+        Cat cat3 = new Cat("MishMish", "Persian", 1);
+        animalShelter.enqueue(cat1);
+        animalShelter.enqueue(cat2);
+        animalShelter.enqueue(cat3);
+       assertEquals("Name: MishMish, Breed: Persian, Age: 1.0", animalShelter.getNewCat().front.next.value.toString());
+    }
+
+    @Test(expected = Exception.class) public void expectedFailure2() throws Exception{
+        AnimalShelter animalShelter = new AnimalShelter();
+        Animal animal = new Animal();
+
+        animalShelter.enqueue(animal);
     }
 }

@@ -85,7 +85,7 @@ public class App {
         AnimalShelter animalShelter = new AnimalShelter();
         animalShelter.enqueue(cat1);
         animalShelter.enqueue(cat2);
-        
+
         animalShelter.dequeue(cat1);
 
     }
