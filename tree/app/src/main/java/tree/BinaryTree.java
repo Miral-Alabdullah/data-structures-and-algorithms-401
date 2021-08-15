@@ -29,21 +29,34 @@ public class BinaryTree<T> {
     public T inOrder(Node<T> node){
         if (root == null){
             return null;
-        } if(node.leftChild != null){
-            inOrder(node.getLeftChild());
+        } if(node != null){
+            if(node.leftChild != null){
+                inOrder(node.getLeftChild());}
             System.out.println(node.getValue());
-            list.add(node.getValue());
-            if(node.rightChild != null){
-                inOrder(node.getRightChild());
-            }
+                list.add(node.getValue());
+                if(node.rightChild != null){
+                    inOrder(node.getRightChild());
+                }
         }
         return node.value;
     }
 
     public T postOrder(Node<T> node){
-
+        if (root == null){
+            return null;
+        } if(node != null){
+            if(node.leftChild != null){
+                postOrder(node.getLeftChild());
+                list.add(node.getValue());
+                if(node.rightChild != null){
+                    postOrder(node.getRightChild());
+                }
+            }
+        }
+        System.out.println(node.getValue());
         return node.value;
     }
+
 
     public Node<T> getRoot() {
         return root;

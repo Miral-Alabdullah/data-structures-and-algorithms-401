@@ -16,7 +16,6 @@ public class Queue<T> {
             rear.next = newNode;
             rear = newNode;
         }
-
     }
 
     public T dequeue() throws Exception {

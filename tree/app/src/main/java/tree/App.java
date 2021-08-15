@@ -28,6 +28,10 @@ public class App {
         System.out.println("-----------------------------------");
 
         binaryTree.inOrder(binaryTree.getRoot());
+
+        System.out.println("-----------------------------------");
+
+        binaryTree.postOrder(binaryTree.getRoot());
     }
 
 

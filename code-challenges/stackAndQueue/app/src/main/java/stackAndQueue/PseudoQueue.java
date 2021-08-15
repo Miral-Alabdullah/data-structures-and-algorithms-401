@@ -12,20 +12,18 @@ public class PseudoQueue<T> {
 
     public void enqueue(T value) {
         stack.push(value);
+        System.out.println("Push : " + value);
     }
-
 
     public T dequeue() throws Exception {
         if(stack1.isEmpty()){
             while (!(stack.isEmpty())){
-                stack1.push(stack1.pop());
-                System.out.println(stack1.top.value);
+                stack1.push(stack.pop());
             }
         }
-//        stack1.pop();
-        System.out.println(stack1.top.value);
-        return stack1.top.value;
+        T value = stack1.peek();
+        stack1.pop();
+        System.out.println("Popped value : " + value);
+        return value;
     }
-
-
-}
+    }

@@ -19,12 +19,12 @@ public class App {
 //        stack.push(29);
 //
 //
-//
 //        stack.pop();
 //        stack.pop();
 //        stack.peek();
+
 //        stack.isEmpty();
-//        System.out.println("Top value : " + stack.top.value);
+//        System.out.println("=========================================");
 //
 
 
@@ -35,12 +35,16 @@ public class App {
 
 //
 //
-//        Queue<Integer> queue = new Queue<Integer>();
+        Queue<Integer> queue = new Queue<Integer>();
 //        Queue<Integer> queue1 = new Queue<Integer>();
 //
 //        queue.enqueue(5);
 //        queue.enqueue(12);
-//        queue.enqueue(27);
+//        queue.enqueue(29);
+//
+//        System.out.print("Top : " + queue.front.value + " -> ");
+//        System.out.print("Next : " + queue.front.next.value + " -> ");
+//        System.out.println("====================\n");
 //        queue.enqueue(50);
 //
 //        queue.dequeue();
@@ -55,10 +59,15 @@ public class App {
 
         PseudoQueue<Integer> pseudoQueue = new PseudoQueue<Integer>();
         pseudoQueue.enqueue(5);
-        pseudoQueue.enqueue(13);
-        pseudoQueue.enqueue(20);
-        pseudoQueue.enqueue(4);
+        pseudoQueue.enqueue(3);
+        pseudoQueue.enqueue(7);
+
+
+
+        System.out.println("Top value : " + pseudoQueue.stack.peek());
+//        pseudoQueue.toString();
         pseudoQueue.dequeue();
+        System.out.println("Top value : " + pseudoQueue.stack1.peek());
 
     }
 }

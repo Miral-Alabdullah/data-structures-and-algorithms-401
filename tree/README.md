@@ -1,5 +1,6 @@
 # Trees
-<!-- Short summary or background information -->
+
+A graph that contains a set of nodes, each node could abe a parent for one or more child node.
 
 ## Challenge
 <!-- Description of the challenge -->
@@ -8,4 +9,5 @@
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
 ## API
-<!-- Description of each method publicly available in each of your trees -->
+
+
