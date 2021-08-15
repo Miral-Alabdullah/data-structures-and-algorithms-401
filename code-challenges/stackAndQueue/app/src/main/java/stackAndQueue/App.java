@@ -69,5 +69,24 @@ public class App {
         pseudoQueue.stack.toString();
         pseudoQueue.dequeue();
 
+
+        /*
+        ====================================================================
+        */
+
+
+        Animal animal = new Animal();
+        Cat cat1 = new Cat("NimNim", "Shirazi", 2);
+        Cat cat2 = new Cat("MinMin", "Persian", 3);
+        Dog dog1 = new Dog("Cooper", "German Shepherd", 1);
+        Dog dog2 = new Dog("Ruby", "Husky", 4);
+
+        cat1.toString();
+        AnimalShelter animalShelter = new AnimalShelter();
+        animalShelter.enqueue(cat1);
+        animalShelter.enqueue(cat2);
+        
+        animalShelter.dequeue(cat1);
+
     }
 }

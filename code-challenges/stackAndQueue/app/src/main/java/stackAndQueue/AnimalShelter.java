@@ -1,27 +1,45 @@
 package stackAndQueue;
 
-public class AnimalShelter{
-    private Cat newCat;
-    private Dog newDog;
+public class AnimalShelter<T>{
+    private Queue<T> newCat;
+    private Queue<T> newDog;
 
-    public AnimalShelter(Cat newCat, Dog newDog) {
-        this.newCat = newCat;
-        this.newDog = newDog;
+    public AnimalShelter() {
+        newCat = new Queue<>();
+        newDog = new Queue<>();
     }
 
-    public Cat getNewCat() {
+    public void enqueue(T animal) {
+        if(animal instanceof Cat){
+            newCat.enqueue(animal);
+        }if(animal instanceof Dog){
+            newDog.enqueue(animal);
+        }
+    }
+
+    public T dequeue(T pref){
+        if(pref instanceof Cat){
+            return pref;
+        }if(pref instanceof Dog){
+            return pref;
+        }
+        else
+            return null;
+    }
+
+    public Queue<T> getNewCat() {
         return newCat;
     }
 
-    public void setNewCat(Cat newCat) {
+    public void setNewCat(Queue<T> newCat) {
         this.newCat = newCat;
     }
 
-    public Dog getNewDog() {
+    public Queue<T> getNewDog() {
         return newDog;
     }
 
-    public void setNewDog(Dog newDog) {
+    public void setNewDog(Queue<T> newDog) {
         this.newDog = newDog;
     }
 }
