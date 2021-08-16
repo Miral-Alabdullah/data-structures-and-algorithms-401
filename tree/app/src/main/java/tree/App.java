@@ -21,6 +21,7 @@ public class App {
         binaryTree.getRoot().setRightChild(new Node(2));
         binaryTree.getRoot().getLeftChild().setLeftChild(new Node(4));
         binaryTree.getRoot().getLeftChild().setRightChild(new Node(7));
+        binaryTree.getRoot().getRightChild().setRightChild(new Node(10));
 
         binaryTree.preOrder(binaryTree.getRoot());
 
@@ -32,6 +33,11 @@ public class App {
         System.out.println("-----------------------------------");
 
         binaryTree.postOrder(binaryTree.getRoot());
+
+        System.out.println("Max : " + binaryTree.maxValue(binaryTree.getRoot()));
+
+//        BinaryTree binaryTree1 = new BinaryTree();
+//        System.out.println("Max in an empty tree : " + binaryTree1.maxValue(binaryTree1.getRoot()));
     }
 
 

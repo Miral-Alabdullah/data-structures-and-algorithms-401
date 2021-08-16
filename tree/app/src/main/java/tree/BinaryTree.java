@@ -57,6 +57,24 @@ public class BinaryTree<T> {
         return node.value;
     }
 
+    public int maxValue(Node<T> node){
+        if (node == null)
+            return 0;
+
+        int root = (int) node.value;
+        System.out.println("root : " + root);
+        int left = maxValue(node.leftChild);
+        System.out.println("left : " + left);
+        int right = maxValue(node.rightChild);
+        System.out.println("right : " + right);
+
+        if (left > root)
+            root = left;
+        if (right > root)
+            root = right;
+        return root;
+    }
+
 
     public Node<T> getRoot() {
         return root;
