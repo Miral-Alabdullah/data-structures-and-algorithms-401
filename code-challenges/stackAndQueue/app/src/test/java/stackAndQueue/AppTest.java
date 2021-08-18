@@ -62,6 +62,7 @@ public class AppTest {
     @Test(expected = Exception.class) public void peekOnEmptyStack() throws Exception {
         Stack<Integer> stack = new Stack<>();
         stack.pop();
+        stack.peek();
     }
 
     //stack-queue-pseudo
