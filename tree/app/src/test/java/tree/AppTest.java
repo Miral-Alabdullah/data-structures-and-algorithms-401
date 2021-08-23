@@ -7,8 +7,118 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
+
     @Test void appHasAGreeting() {
         App classUnderTest = new App();
         assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
     }
+
+    //Can successfully instantiate an empty tree
+    @Test void instantiateAnEmptyTree(){
+        BinaryTree binaryTree = new BinaryTree();
+
+        assertTrue(binaryTree instanceof BinaryTree);
+        assertNull(binaryTree.root);
+    }
+
+    //Can successfully instantiate a tree with a single root node
+    @Test void instantiateATreeWithSingleRoot(){
+        BinaryTree binaryTree = new BinaryTree();
+
+        binaryTree.setRoot(new Node(1));
+        assertEquals(1, binaryTree.getRoot().value);
+    }
+
+    //Can successfully add a left child and right child to a single root node
+    @Test void addLeftAndRight(){
+        BinaryTree binaryTree = new BinaryTree();
+
+        binaryTree.setRoot(new Node(1));
+        binaryTree.getRoot().setRightChild(new Node(5));
+        binaryTree.getRoot().setLeftChild(new Node(6));
+
+        assertEquals(5, binaryTree.getRoot().getRightChild().value);
+        assertEquals(6, binaryTree.getRoot().getLeftChild().value);
+    }
+
+    //Can successfully return a collection from a preorder traversal
+    @Test public void preOrder(){
+        BinaryTree binaryTree1 = new BinaryTree();
+
+        binaryTree1.setRoot(new Node(1));
+        binaryTree1.getRoot().setLeftChild(new Node(1));
+        binaryTree1.getRoot().setRightChild(new Node(2));
+        binaryTree1.getRoot().getLeftChild().setLeftChild(new Node(4));
+        binaryTree1.getRoot().getLeftChild().setRightChild(new Node(7));
+
+        binaryTree1.preOrder(binaryTree1.getRoot());
+        assertEquals("1 -> 1 -> 4 -> 7 -> 2 -> NULL", binaryTree1.toString());
+    }
+
+    //Can successfully return a collection from an inorder traversal
+    @Test public void inOrder(){
+        BinaryTree binaryTree1 = new BinaryTree();
+
+        binaryTree1.setRoot(new Node(1));
+        binaryTree1.getRoot().setLeftChild(new Node(1));
+        binaryTree1.getRoot().setRightChild(new Node(2));
+        binaryTree1.getRoot().getLeftChild().setLeftChild(new Node(4));
+        binaryTree1.getRoot().getLeftChild().setRightChild(new Node(7));
+        binaryTree1.getRoot().getRightChild().setRightChild(new Node(10));
+
+        binaryTree1.inOrder(binaryTree1.getRoot());
+        assertEquals("4 -> 1 -> 7 -> 1 -> 2 -> 10 -> NULL", binaryTree1.toString());
+    }
+
+    //Can successfully return a collection from a postorder traversal
+    @Test public void postOrder(){
+        BinaryTree binaryTree1 = new BinaryTree();
+
+        binaryTree1.setRoot(new Node(1));
+        binaryTree1.getRoot().setLeftChild(new Node(1));
+        binaryTree1.getRoot().setRightChild(new Node(2));
+        binaryTree1.getRoot().getLeftChild().setLeftChild(new Node(4));
+        binaryTree1.getRoot().getLeftChild().setRightChild(new Node(7));
+
+        binaryTree1.postOrder(binaryTree1.getRoot());
+        assertEquals("4 -> 7 -> 1 -> 2 -> 1 -> NULL", binaryTree1.toString());
+    }
+
+
+
+    //Tree-Max
+    // “Happy Path” - Expected outcome
+    @Test public void maxHappyPath() throws Exception{
+        BinaryTree binaryTree1 = new BinaryTree();
+
+        binaryTree1.setRoot(new Node(1));
+        binaryTree1.getRoot().setLeftChild(new Node(1));
+        binaryTree1.getRoot().setRightChild(new Node(2));
+        binaryTree1.getRoot().getLeftChild().setLeftChild(new Node(4));
+        binaryTree1.getRoot().getLeftChild().setRightChild(new Node(7));
+
+        assertEquals(7, binaryTree1.maxValue(binaryTree1.getRoot()));
+    }
+
+    // Expected failure
+    @Test public void expectedFail() throws Exception{
+        BinaryTree binaryTree1 = new BinaryTree();
+        binaryTree1.maxValue(binaryTree1.getRoot());
+
+        assertEquals(0, binaryTree1.maxValue(binaryTree1.getRoot()));
+    }
+
+    @Test
+    public  void  testBreadthFirst() throws Exception {
+        BinaryTree binaryTree1 = new BinaryTree();
+
+        binaryTree1.setRoot(new Node(1));
+        binaryTree1.getRoot().setLeftChild(new Node(1));
+        binaryTree1.getRoot().setRightChild(new Node(2));
+        binaryTree1.getRoot().getLeftChild().setLeftChild(new Node(4));
+        binaryTree1.getRoot().getLeftChild().setRightChild(new Node(7));
+
+        assertEquals("[1, 1, 2, 4, 7]", binaryTree1.breadthFirst(binaryTree1).toString());
+    }
+
 }
