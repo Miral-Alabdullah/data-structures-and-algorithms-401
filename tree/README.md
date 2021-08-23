@@ -32,9 +32,28 @@ A graph that contains a set of nodes, each node could abe a parent for one or mo
 
    - maxValue() => This method returns the maximum value of the tree.
 
+   ![!](./code-ch-breadth.png)
+
+   - breadthFirstSearch(BinaryTree tree) => This method will take the tree as argument and returns a list of the tree's nodes level by level.
 
    <br>
 
 ### Binary Search Tree Class : 
 
 
+Create a Binary Search Tree class
+
+   - This class should be a sub-class (or your languages equivalent) of the Binary Tree Class, with the following additional methods:
+    Add
+	
+       - Arguments: value
+
+       - Return: nothing
+
+       - Adds a new node with that value in the correct location in the binary search tree.
+
+   - Contains
+
+       - Argument: value
+
+       - Returns: boolean indicating whether or not the value is in the tree at least once.

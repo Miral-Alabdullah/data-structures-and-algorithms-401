@@ -1,13 +1,17 @@
 package tree;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
+
 
 public class BinaryTree<T> {
 
-    private Node<T> root;
+    public Node<T> root;
 
     List<T> list = new ArrayList<>();
+
 
     public T preOrder(Node<T> node){
         if (root == null){
@@ -47,26 +51,25 @@ public class BinaryTree<T> {
         } if(node != null){
             if(node.leftChild != null){
                 postOrder(node.getLeftChild());
-                list.add(node.getValue());
                 if(node.rightChild != null){
                     postOrder(node.getRightChild());
                 }
             }
         }
+        list.add(node.getValue());
         System.out.println(node.getValue());
+
         return node.value;
     }
 
-    public int maxValue(Node<T> node){
-        if (node == null)
+    public int maxValue(Node<T> node) throws Exception{
+        if (node == null) {
             return 0;
+        }
 
         int root = (int) node.value;
-        System.out.println("root : " + root);
         int left = maxValue(node.leftChild);
-        System.out.println("left : " + left);
         int right = maxValue(node.rightChild);
-        System.out.println("right : " + right);
 
         if (left > root)
             root = left;
@@ -75,6 +78,39 @@ public class BinaryTree<T> {
         return root;
     }
 
+
+    public String toString(){
+        String s = "";
+        for (int i = 0; i<list.size(); i++){
+            s += list.get(i) + " -> ";
+        }
+        s = s + "NULL";
+        System.out.println(s);
+        return s;
+    }
+
+    public List<T> breadthFirst(BinaryTree tree){
+        Queue<Node> breadth = new LinkedList();
+        List<T> list = new ArrayList<>();
+        String s = "";
+        breadth.add(tree.getRoot());
+        while(breadth.peek() != null) {
+            Node<T> node = breadth.remove();
+            list.add(node.getValue());
+            if (node.getLeftChild() != null){
+                breadth.add(node.getLeftChild());
+            }
+            if (node.getRightChild() != null){
+                breadth.add(node.getRightChild());
+            }
+        }
+        for (int i = 0; i < list.size(); i++) {
+            s += list.get(i) + " -> ";
+        }
+        s = s + "NULL";
+        System.out.println(s);
+        return list;
+    }
 
     public Node<T> getRoot() {
         return root;

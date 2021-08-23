@@ -11,7 +11,7 @@ public class App {
         return "Hello World!";
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         System.out.println(new App().getGreeting());
 
         BinaryTree binaryTree = new BinaryTree();
@@ -23,22 +23,48 @@ public class App {
         binaryTree.getRoot().getLeftChild().setRightChild(new Node(7));
         binaryTree.getRoot().getRightChild().setRightChild(new Node(10));
 
-        binaryTree.preOrder(binaryTree.getRoot());
-
-
-        System.out.println("-----------------------------------");
-
-        binaryTree.inOrder(binaryTree.getRoot());
+        binaryTree.breadthFirst(binaryTree);
+//
+//        binaryTree.preOrder(binaryTree.getRoot());
+//        binaryTree.toString();
+//
+//        System.out.println("-----------------------------------");
+//
+//        BinaryTree binaryTree1 = new BinaryTree();
+//
+//        binaryTree1.setRoot(new Node(1));
+//        binaryTree1.getRoot().setLeftChild(new Node(1));
+//        binaryTree1.getRoot().setRightChild(new Node(2));
+//        binaryTree1.getRoot().getLeftChild().setLeftChild(new Node(4));
+//        binaryTree1.getRoot().getLeftChild().setRightChild(new Node(7));
+//        binaryTree1.getRoot().getRightChild().setRightChild(new Node(10));
+//
+//        binaryTree1.inOrder(binaryTree1.getRoot());
+//        binaryTree1.toString();
 
         System.out.println("-----------------------------------");
 
         binaryTree.postOrder(binaryTree.getRoot());
+        binaryTree.toString();
 
         System.out.println("Max : " + binaryTree.maxValue(binaryTree.getRoot()));
 
 //        BinaryTree binaryTree1 = new BinaryTree();
 //        System.out.println("Max in an empty tree : " + binaryTree1.maxValue(binaryTree1.getRoot()));
+
+
+        BinarySearchTree binarySearchTree = new BinarySearchTree();
+        binarySearchTree.add(5);
+        binarySearchTree.add(13);
+        binarySearchTree.add(12);
+        binarySearchTree.add(20);
+        binarySearchTree.add(19);
+
+        System.out.println("Does this tree contain? " + binarySearchTree.contain(4));
+        System.out.println("Does this tree contain? " + binarySearchTree.contain(19));
     }
+
+
 
 
 }
