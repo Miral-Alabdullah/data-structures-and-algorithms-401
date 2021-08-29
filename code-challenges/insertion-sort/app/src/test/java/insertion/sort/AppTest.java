@@ -14,18 +14,18 @@ class AppTest {
         assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
     }
 
-    // Happy PAth
+    // Happy Path
     @Test void testInsertionSortMethod() throws Exception {
         int[] arr = {5,-12,23,-4,8,9,27,19,7,0,-1};
         InsertionSort insertionSort = new InsertionSort();
         assertEquals(5, insertionSort.insertionSort(arr)[4]);
     }
 
-    // Edge case
+    // Edge case || Expected Failure
     @Test void testInsertionSortMethodEmptyArray() throws Exception {
-        int[] arr = new int[10];
+        int[] arr = new int [0];
         InsertionSort insertionSort = new InsertionSort();
-        Assertions.assertThrows(IllegalArgumentException.class, () -> {
+        Assertions.assertThrows(Exception.class, () -> {
             insertionSort.insertionSort(arr);
         });
     }
