@@ -12,8 +12,26 @@ public class App {
 
     public static void main(String[] args) throws Exception {
         System.out.println(new App().getGreeting());
-        int[] arr = {5,-12,23,-4,8,9,27,19,7,0,-1};
+        System.out.println("\n");
+//        int[] arr = {5,-12,23,-4,8,9,27,19,7,0,-1};
+        int[] arr = {5,-12,23,-4};
         InsertionSort insertionSort = new InsertionSort();
+        System.out.println("My array XD : ");
         insertionSort.insertionSort(arr);
+
+
+//        int[] reverseSorted = {20,18,12,8,5,-2};
+//        int[] fewUniques = {5,12,7,5,5,7};
+//        int[] nearlySorted = {2,3,5,7,13,11};
+//
+//        System.out.println("\n");
+//        System.out.println("Reverse-sorted : ");
+//        insertionSort.insertionSort(reverseSorted);
+//        System.out.println("Few uniques : ");
+//        insertionSort.insertionSort(fewUniques);
+//        System.out.println("Nearly-sorted : ");
+//        insertionSort.insertionSort(nearlySorted);
+//        System.out.println("\n");
+
     }
 }
