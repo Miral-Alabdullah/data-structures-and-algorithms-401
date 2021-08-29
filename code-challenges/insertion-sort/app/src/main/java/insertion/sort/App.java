@@ -10,11 +10,10 @@ public class App {
         return "Hello World!";
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         System.out.println(new App().getGreeting());
-        int[] arr = {5,12,23,4,8,9};
+        int[] arr = {5,-12,23,-4,8,9,27,19,7,0,-1};
         InsertionSort insertionSort = new InsertionSort();
         insertionSort.insertionSort(arr);
-        System.out.println(insertionSort.insertionSort(arr));
     }
 }

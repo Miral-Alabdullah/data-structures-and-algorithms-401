@@ -1,10 +1,15 @@
 package insertion.sort;
 
+import java.util.Arrays;
+
 public class InsertionSort {
 
-    public int[] insertionSort(int[] arr){
+    public int[] insertionSort(int[] arr) throws Exception {
         int j;
         int temp;
+        if(arr.length == 0){
+            throw new Exception("The array is empty!");
+        }
         for(int i=1; i<arr.length; i++){
             j = i-1;
             temp = arr[i];
@@ -15,8 +20,10 @@ public class InsertionSort {
                 arr[j+1] = temp;
             }
         }
+        System.out.println(Arrays.toString(arr));
         return arr;
     }
+
 
     
 }

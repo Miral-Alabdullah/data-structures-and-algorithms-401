@@ -3,12 +3,30 @@
  */
 package insertion.sort;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
     @Test void appHasAGreeting() {
         App classUnderTest = new App();
         assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+    }
+
+    // Happy PAth
+    @Test void testInsertionSortMethod() throws Exception {
+        int[] arr = {5,-12,23,-4,8,9,27,19,7,0,-1};
+        InsertionSort insertionSort = new InsertionSort();
+        assertEquals(5, insertionSort.insertionSort(arr)[4]);
+    }
+
+    // Edge case
+    @Test void testInsertionSortMethodEmptyArray() throws Exception {
+        int[] arr = new int[10];
+        InsertionSort insertionSort = new InsertionSort();
+        Assertions.assertThrows(IllegalArgumentException.class, () -> {
+            insertionSort.insertionSort(arr);
+        });
     }
 }
