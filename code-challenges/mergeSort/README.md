@@ -48,6 +48,23 @@ ALGORITHM Merge(left, right, arr)
 <br>
 <hr>
 
-**Sample Arrays:** [8,4,23,42,16,3]
+**Sample Arrays:** [5,-12,3,8,16,20,19]
+
+![!](./divide-the-array.png)
 
 
+![!](./first-partition.png)
+
+
+![!](./Conquer-the-array.png)
+
+
+## Description : 
+
+
+
+## Efficency
+
+ * Time: O(n*log(n))
+ 
+ * Space: O(n)

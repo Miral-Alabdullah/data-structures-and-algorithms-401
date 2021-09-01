@@ -13,6 +13,7 @@ public class MergeSort {
 
         if(n>1){
             int mid = arr.length/2;
+            System.out.println(mid);
             int[] left = Arrays.copyOfRange(arr, 0, mid);
             int[] right = Arrays.copyOfRange(arr, mid, n);
 
