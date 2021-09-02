@@ -31,7 +31,6 @@ public class QuickSort {
     }
 
     public void Swap(int[] arr, int i, int low){
-        System.out.println(Arrays.toString(arr));
         int temp;
         temp = arr[i];
         arr[i] = arr[low];

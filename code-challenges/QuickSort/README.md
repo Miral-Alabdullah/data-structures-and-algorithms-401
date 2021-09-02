@@ -1,3 +1,5 @@
-# The BLOG still in progress 
+# Quick Sort
 
-![!](./20210902_085800.jpg)
+
+
+![!](./c-c-quicksort.png)
