@@ -2,6 +2,7 @@ package HashTable;
 
 
 
+
 public class HashTableClass {
 
     public static class LinkedList {
@@ -88,7 +89,6 @@ public class HashTableClass {
         }
          return false;
     }
-
 
 
 }

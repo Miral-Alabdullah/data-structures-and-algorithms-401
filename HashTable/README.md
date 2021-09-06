@@ -52,3 +52,21 @@ Write an implementation for the following methods in Hash Table :
   - get() => To get the key: value pair from the array by the given key.
 
   - contains() => It checks if the given key exists in the array, it is a boolean method that return either true or false. 
+
+
+<br>
+<br>
+
+References : 
+
+- [Implement Hash-Table in Java](https://www.youtube.com/watch?v=bBKu9gJr_y0&t=688s)
+
+- [Javanotes](https://math.hws.edu/javanotes/c10/ex3-ans.html)
+
+- [Convert string to ASCII value in Java](http://easyonlineconverter.com/codes/java_codes/convert-strin-to-ASCII-value-in-java.html)
+
+
+<br>
+<hr>
+
+- [HashMap](.\HashMap.md)
