@@ -10,7 +10,7 @@ Writing a function called repeated word that finds the first word to occur more 
 
 ## Whiteboard Process
 
-![reapeatedword](..\repeatedword.png)
+![reapeatedword](./repeatedword.png)
 
 
 <br>
@@ -32,4 +32,4 @@ Space : Big O(n)
 
 ## Solution
 
-![reapeatedword](..\repeatedwordverification.png)
+![reapeatedword](./repeatedwordverification.png)
