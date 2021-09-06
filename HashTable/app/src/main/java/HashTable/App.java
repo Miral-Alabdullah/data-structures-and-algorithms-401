@@ -10,17 +10,15 @@ public class App {
         return "Hello World!";
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         System.out.println(new App().getGreeting());
-//
-//        char ch = 'c';
-//        char ch1 = 'C';
-//        int ascii = ch;
-//        int ascii1 = ch1;
-        String string = "Miral";
-//        System.out.println("ASCII of c = " + ascii);
-//        System.out.println("ASCII of C = " + ascii1);
-//        String arrayOfStrings = Arrays.toString(string.split("")).toLowerCase();
+
+
+        HashTableClass hashTableClass = new HashTableClass();
+        hashTableClass.HashTable(10);
+        hashTableClass.add("abc", "Hello");
+        hashTableClass.get("abc");
+        hashTableClass.contains("abc");
 
     }
 }
