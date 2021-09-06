@@ -1,13 +1,23 @@
 package HashTable;
 
-import org.w3c.dom.Node;
+
 
 public class HashTableClass {
 
-    public class LinkedList {
+    public static class LinkedList {
         //Class to represent the linkedList that holds the key: value pair and a pointer that indicates to the next node.
         String key, value;
-        Node next;
+        LinkedList next;
+
+        public LinkedList(String key, String value){
+            this.key = key;
+            this.value = value;
+            this.next = null;
+        }
+
+        public LinkedList(){
+            this.next = null;
+        }
     }
 
     //Array of type linkedList class
@@ -20,6 +30,9 @@ public class HashTableClass {
             throw new IllegalArgumentException("Illegal table size");
         }
         arrayOfLinkedList = new LinkedList[initialSize];
+        for (int i = 0; i < arrayOfLinkedList.length; i++) {
+            arrayOfLinkedList[i] = new LinkedList();
+        }
     }
 
 
@@ -42,7 +55,40 @@ public class HashTableClass {
             throw new Exception("The Key Can't Be Null");
         } else {
             int index = Hash(key);
+            LinkedList list = arrayOfLinkedList[index];
+            LinkedList newItem = new LinkedList(key, value);
+            newItem.next = list.next;
+            list.next = newItem;
+            System.out.println(newItem.value);
         }
-
     }
+
+    public String get(String key){
+        String value = null;
+        int index = Hash(key);
+        LinkedList list = arrayOfLinkedList[index];
+        while (list.next != null){
+            if (list.key == key){
+                value = list.value;
+                break;
+            }
+            list = list.next;
+        }
+        System.out.println(list.value);
+        return value;
+    }
+
+    public boolean contains(String key) {
+        int index = Hash(key);
+        LinkedList list = arrayOfLinkedList[index];
+        while (list != null) {
+            if (list.key == key)
+                return true;
+            list = list.next;
+        }
+         return false;
+    }
+
+
+
 }

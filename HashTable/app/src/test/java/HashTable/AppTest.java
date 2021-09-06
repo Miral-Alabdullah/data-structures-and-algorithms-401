@@ -11,4 +11,28 @@ class AppTest {
         App classUnderTest = new App();
         assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
     }
+
+    //Adding a key/value to your hashtable results in the value being in the data structure
+    //Retrieving based on a key returns the value stored
+    @Test void addToHashTable() throws Exception{
+        HashTableClass hashTableClass = new HashTableClass();
+        hashTableClass.HashTable(10);
+        hashTableClass.add("abc", "Hello");
+        assertEquals("Hello", hashTableClass.get("abc"));
+    }
+
+    //Successfully returns null for a key that does not exist in the hashtable
+    @Test void returnNull(){
+        HashTableClass hashTableClass = new HashTableClass();
+        hashTableClass.HashTable(10);
+        assertNull(hashTableClass.get("abc"));
+    }
+
+    //Successfully hash a key to an in-range value
+    @Test void hashTheKey(){
+        HashTableClass hashTableClass = new HashTableClass();
+        hashTableClass.HashTable(10);
+        hashTableClass.Hash("abc");
+        assertEquals(4, hashTableClass.Hash("abc"));
+    }
 }
