@@ -1,7 +1,7 @@
 package HashMap;
 
 public class Node {
-    Node right, left;
+    Node right, left, next;
     int value;
 
     public Node (int value) {
