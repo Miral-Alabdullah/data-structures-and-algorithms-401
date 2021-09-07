@@ -38,8 +38,11 @@ public class BinaryTree {
 
 
 
-    public ArrayList<Integer> treeIntersection(BinaryTree tree1, BinaryTree tree2){
+    public ArrayList<Integer> treeIntersection(BinaryTree tree1, BinaryTree tree2) throws Exception{
         ArrayList<Integer> arrayOfNode = new ArrayList<>();
+        if(tree1.getRoot() == null || tree2.getRoot() == null){
+            throw new Exception("Check your input, both trees can't be null!");
+        }
         tree1.preOrder(tree1.getRoot());
         tree2.postOrder(tree2.getRoot());
         for(Integer i: tree1.hashMap.keySet()){

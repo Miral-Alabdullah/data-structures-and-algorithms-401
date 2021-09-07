@@ -8,7 +8,7 @@ public class App {
         return "Hello World!";
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
         System.out.println(new App().getGreeting());
 
         BinaryTree binaryTree = new BinaryTree();
@@ -46,6 +46,6 @@ public class App {
         binaryTree1.getRoot().getRight().getRight().setLeft(new Node(4));
         binaryTree1.getRoot().getRight().getRight().setRight(new Node(500));
 
-        binaryTree.treeIntersection(binaryTree1, binaryTree);
+        binaryTree.treeIntersection(binaryTree1, binaryTree).contains(100);
     }
 }
