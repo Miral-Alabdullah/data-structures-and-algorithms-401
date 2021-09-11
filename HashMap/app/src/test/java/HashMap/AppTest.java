@@ -16,15 +16,17 @@ class AppTest {
 
     //Throw Exception if one of trees is empty
     @Test void emptyString() throws Exception{
+        HashMapClass hashMapClass = new HashMapClass();
         BinaryTree binaryTree = new BinaryTree();
         BinaryTree tree1 = new BinaryTree();
         BinaryTree tree2 = new BinaryTree();
         Assertions.assertThrows(Exception.class, ()->{
-            binaryTree.treeIntersection(tree1, tree2);
+            hashMapClass.treeIntersection(tree1, tree2);
         });
     }
 
     @Test void happyPath() throws Exception{
+        HashMapClass hashMapClass = new HashMapClass();
         BinaryTree binaryTree = new BinaryTree();
 
         binaryTree.setRoot(new Node(150));
@@ -57,9 +59,10 @@ class AppTest {
         binaryTree1.getRoot().getRight().getRight().setLeft(new Node(4));
         binaryTree1.getRoot().getRight().getRight().setRight(new Node(500));
 
-        binaryTree.treeIntersection(binaryTree1, binaryTree);
 
-        assertTrue(binaryTree.treeIntersection(binaryTree1, binaryTree).contains(500));
+        hashMapClass.treeIntersection(binaryTree1, binaryTree);
+
+        assertTrue(hashMapClass.treeIntersection(binaryTree1, binaryTree).contains(500));
     }
 
 }

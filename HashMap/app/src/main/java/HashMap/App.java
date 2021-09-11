@@ -3,6 +3,8 @@
  */
 package HashMap;
 
+import java.util.HashMap;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
@@ -46,6 +48,24 @@ public class App {
         binaryTree1.getRoot().getRight().getRight().setLeft(new Node(4));
         binaryTree1.getRoot().getRight().getRight().setRight(new Node(500));
 
-        binaryTree.treeIntersection(binaryTree1, binaryTree).contains(100);
+        HashMapClass hashMapClass = new HashMapClass();
+        hashMapClass.treeIntersection(binaryTree1, binaryTree);
+
+
+        /////////////////////////////////////////////////////////////////////////////////////////////
+
+
+        HashMap<String, String> left = new HashMap<>();
+        HashMap<String, String> right = new HashMap<>();
+
+        left.put("fond", "enamored");
+        left.put("wrath", "anger");
+        left.put("diligent", "employed");
+
+        right.put("fond", "averse");
+        right.put("wrath", "delight");
+        right.put("diligent", "idle");
+
+        hashMapClass.leftJoin(left, right);
     }
 }
