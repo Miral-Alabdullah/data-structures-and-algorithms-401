@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a095dd9-1586-481a-9210-a49285e07504" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries-with-intellij-classes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/HashMap/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/HashMap/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/HashMap/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/HashMap/BinaryTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/HashMap/HashMapClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/HashMap/HashMapClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/test/java/HashMap/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/HashMap/AppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

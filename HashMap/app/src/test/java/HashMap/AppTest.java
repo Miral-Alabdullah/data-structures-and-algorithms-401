@@ -5,6 +5,9 @@ package HashMap;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import java.util.HashMap;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
@@ -15,16 +18,15 @@ class AppTest {
 
 
     //Throw Exception if one of trees is empty
-    @Test void emptyString() throws Exception{
-        BinaryTree binaryTree = new BinaryTree();
+    @Test void emptyString(){
+        HashMapClass hashMapClass = new HashMapClass();
         BinaryTree tree1 = new BinaryTree();
         BinaryTree tree2 = new BinaryTree();
-        Assertions.assertThrows(Exception.class, ()->{
-            binaryTree.treeIntersection(tree1, tree2);
-        });
+        Assertions.assertThrows(Exception.class, ()-> hashMapClass.treeIntersection(tree1, tree2));
     }
 
     @Test void happyPath() throws Exception{
+        HashMapClass hashMapClass = new HashMapClass();
         BinaryTree binaryTree = new BinaryTree();
 
         binaryTree.setRoot(new Node(150));
@@ -57,9 +59,34 @@ class AppTest {
         binaryTree1.getRoot().getRight().getRight().setLeft(new Node(4));
         binaryTree1.getRoot().getRight().getRight().setRight(new Node(500));
 
-        binaryTree.treeIntersection(binaryTree1, binaryTree);
 
-        assertTrue(binaryTree.treeIntersection(binaryTree1, binaryTree).contains(500));
+        hashMapClass.treeIntersection(binaryTree1, binaryTree);
+
+        assertTrue(hashMapClass.treeIntersection(binaryTree1, binaryTree).contains(500));
+    }
+
+    //Throw Exception if one of trees is empty
+    @Test void emptyHashMaps(){
+        HashMapClass hashMapClass = new HashMapClass();
+        HashMap<String, String> left = new HashMap<>();
+        HashMap<String, String> right = new HashMap<>();
+        Assertions.assertThrows(Exception.class, ()-> hashMapClass.leftJoin(left, right));
+    }
+
+    //Happy path
+    @Test void happyPathLeftJoin() throws Exception{
+        HashMapClass hashMapClass = new HashMapClass();
+        HashMap<String, String> left = new HashMap<>();
+        HashMap<String, String> right = new HashMap<>();
+        left.put("fond", "enamored");
+        left.put("wrath", "anger");
+        left.put("diligent", "employed");
+
+        right.put("fond", "averse");
+        right.put("wrath", "delight");
+        right.put("diligent", "idle");
+
+        assertEquals("[[diligent, employed, idle], [wrath, anger, delight], [fond, enamored, averse]]", hashMapClass.leftJoin(left, right));
     }
 
 }
