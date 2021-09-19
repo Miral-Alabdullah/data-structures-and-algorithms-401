@@ -1,4 +1,4 @@
-package Graph;
+package graph;
 
 public class LinkedList<T> {
     public Node<T> head;
@@ -29,5 +29,14 @@ public class LinkedList<T> {
             }
             current.next = newNodeInstance;
         }
+    }
+
+    public int size(){
+        int size = 0;
+        while (current != null){
+            size++;
+            current = current.next;
+        }
+        return size;
     }
 }

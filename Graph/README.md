@@ -6,7 +6,7 @@ A graph is a non-linear data structure that can be looked at as a collection of 
 
 ## Challenge
 
-Implement the Graph with specific methods : 
+Implement the graph with specific methods : 
 
   - addNode() 
 
@@ -22,17 +22,61 @@ Implement the Graph with specific methods :
 
 ## Approach & Efficiency
 
+  - addNode() 
+
+    * Time : O(1) 
+
+    * Space : O(1)
+
+
+  - addEdge()
+
+    * Time : O(1) 
+
+    * Space : O(1)
+
+
+  - getNodes()
+
+    * Time : O(1) 
+
+    * Space : O(1)
+
+
+  - getNeighbors()
+
+    * Time : O(1) 
+
+    * Space : O(n)
+
+  - size()
+
+    * Time : O(1) 
+
+    * Space : O(1)
+
 
 
 ## API
 
 
-- addNode() => To add nodes to the Graph.
+- addNode() => To add nodes to the graph.
 
 - addEdge() => Add edges to connect the nodes.
 
-- getNodes() => Get a list of nodes after travsering the Graph.
+- getNodes() => Get a list of nodes after travsering the graph.
 
 - getNeighbors() => Get the neighbors of each node without duplicates.
 
-- size() => Returns the size of the Graph based on the number of nodes.
+- size() => Returns the size of the graph based on the number of nodes.
+
+
+
+# Business Trip 
+
+![](./trip.png)
+
+
+# Depth First 
+
+![](./depthFirst.png)

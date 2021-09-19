@@ -1,4 +1,4 @@
-package Graph;
+package graph;
 
 public class Queue<T> {
     Node<T> front = null;
@@ -23,7 +23,7 @@ public class Queue<T> {
             front = front.next;
         }
 
-        System.out.println("The removed value : " + front.value);
+//        System.out.println("The removed value : " + front.value);
         return front.value;
     }
 
